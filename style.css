@@ -1,0 +1,10 @@
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(249,147,3,1) 35%, rgba(255,184,0,1) 100%);
+text-align: center ;
+}
+#mycanvas{
+    background-color: rgb(255, 177, 83);
+    border-style: ridge ;
+    border-color: rgb(255, 153, 0);
+}

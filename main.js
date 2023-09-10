@@ -64,16 +64,15 @@ canvas.addEventListener("touchmove", moverDedoParaDesenhar);
 
 function moverDedoParaDesenhar(e) {
     touchXfinal = e.touches[0].clientX - canvas.offsetLeft;
-    touchYinicial = e.touches[0].clientY - canvas.offsetTop;
-
+    touchYfinal = e.touches[0].clientY - canvas.offsetTop;
 
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = largura;
-    ctx.moveTo(touchXfinal, touchYfinal);
-    ctx.lineTo(touchXinicial, touchYinicial);
+    ctx.moveTo(touchXinicial, touchYinicial); // Use touchXinicial e touchYinicial aqui
+    ctx.lineTo(touchXfinal, touchYfinal); // Use touchXfinal e touchYfinal aqui
     ctx.stroke();
 
-    touchXfinal = touchXinicial;
-    touchYfinal = touchYinicial;
+    touchXinicial = touchXfinal; // Atualize as coordenadas iniciais com as finais
+    touchYinicial = touchYfinal; // Atualize as coordenadas iniciais com as finais
 }
